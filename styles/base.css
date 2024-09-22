@@ -1,0 +1,65 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+    background-color: #002f4b;
+    color: #ffffff;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #e3e3e3;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* Main layout */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #002f4b;
+    color: #ffffff;
+}
