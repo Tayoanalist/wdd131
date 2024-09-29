@@ -1,0 +1,15 @@
+/* Large view styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  #hamburger {
+    display: none;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
