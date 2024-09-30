@@ -9,9 +9,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+    background-color: #e784d0;
+    color: rgb(20, 1, 1);
+    padding: .5rem;
   }
   
   nav ul {
@@ -22,7 +22,7 @@ body {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: white;
+    color: rgb(146, 135, 135);
   }
   
   .grid {
@@ -44,8 +44,8 @@ body {
   footer {
     text-align: center;
     padding: 1rem;
-    background-color: #333;
-    color: white;
+    background-color: #998cf1;
+    color: rgb(247, 242, 242);
   }
   
 
@@ -56,12 +56,12 @@ body {
   nav ul {
     list-style: none;
     padding: 0;
-    background-color: #333;
+    background-color: #e784d0;
     text-align: center;
   }
   
   nav ul li a {
-    color: white;
+    color: rgb(18, 17, 17);
     text-decoration: none;
     display: block;
     padding: 1rem;
