@@ -1,0 +1,69 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#hero img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+#data, #weather {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#data ul, #weather ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#data li, #weather li {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: green;
+    color: white;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-gap: 20px;
+        align-items: start;
+    }
+
+    #hero img {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
+
