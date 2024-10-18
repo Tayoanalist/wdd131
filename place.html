@@ -7,9 +7,10 @@
     <title>Nigeria</title>
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
-<body>
+<body>  
     <header>
         <h1>Nigeria</h1>
     </header>
@@ -18,7 +19,7 @@
         <!-- Hero Image Section -->
         <section id="hero">
             <picture>
-                <img src="images/eagle.png" alt="images">
+                <img src="images/eagle.WEBP" alt="images">
             </picture>
         </section>
 
@@ -39,17 +40,27 @@
 
         <!-- Weather Section -->
         <section id="weather">
-            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <h2>Weather
+                <img 
+                srcset=" 
+                  images/weather.svg 800w, 
+                  images/weather.png 1200w"
+                sizes="
+                       (max-width: 1200px) 800px, 
+                       1200px"
+                src="images/weather.png" 
+                alt="Responsive example image">
+            </h2>
             <ul>
                 <li>Temperature: <span id="temperature">32.4°C</span></li>
                 <li>Wind Speed: <span id="wind-speed">5 km/h</span></li>
-                <li>Wind Chill: <span id="wind-chill">N/A</span></li>
+                <li>Wind Chill: <span id="wind-chill"></span></li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> - Nigeria - Last modified: <span id="last-modified"></span></p>
+        <p>&copy; <span id="currentyear"></span> - Nigeria - Last modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 

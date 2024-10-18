@@ -5,7 +5,7 @@ document.getElementById('currentyear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
 
 
-// Function to calculate wind chill factor
+document.getElementById('wind-chill').textContent = calculateWindChill();// Function to calculate wind chill factor
 function calculateWindChill(temp, windSpeed) {
     // Wind chill formula in Celsius
     return (
@@ -15,11 +15,17 @@ function calculateWindChill(temp, windSpeed) {
 }
 
 // Wind chill calculation logic
-window.onload = function() {
+window.onload = function () {
     const temp = 10; // Static value for temperature in Celsius
     const windSpeed = 5; // Static value for wind speed in km/h
 
     // Check if the conditions for wind chill calculation are met
     if (temp <= 10 && windSpeed > 4.8) {
         const windChillValue = calculateWindChill(temp, windSpeed);
-        document.getElemen
+        document.getElementById('windChill').textContent = 
+            `Wind Chill: ${windChillValue.fixed(2)} °C`;
+    } else {
+        document.getElementById('windChill').textContent = 
+            "Wind Chill: N/A";
+    }
+};
