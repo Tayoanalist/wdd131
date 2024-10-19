@@ -19,12 +19,14 @@ main {
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
+	min-height: 500px;
 }
 
 #hero img {
 	width: 100%;
 	max-width: 1200px;
 	height: auto;
+	display: none;
 }
 
 #data,
@@ -58,14 +60,22 @@ footer {
 /* Media Query for Larger Screens */
 @media (min-width: 768px) {
 	main {
-		display: grid;
-		grid-template-columns: 1fr 3fr 1fr;
-		grid-gap: 20px;
-		align-items: start;
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		align-items: center;
+		justify-content: space-evenly;
+		background-image: url("/images/eagle.webp");
 	}
 
 	#hero img {
 		grid-column: 1 / -1;
 		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	#hero img {
+		display: block;
 	}
 }
