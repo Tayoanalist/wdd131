@@ -1,3 +1,19 @@
+// Set the current year
+const yearSpan = document.getElementById('currentyear');
+yearSpan.textContent = new Date().getFullYear();
+
+// Set last modified date
+const lastModified = document.getElementById('lastModified');
+lastModified.textContent = `Last modified: ${document.lastModified}`;
+
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -56,4 +72,53 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   // Add more temple objects here...
+  {
+    templeName: "Toronto Canada",
+    location: "Toronto, Ontario, Canada",
+    dedicated: "1990, August, 25",
+    area: 57982,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/toronto-ontario/400x250/toronto-temple-lds-817787-wallpaper.jpg"
+  },
+  {
+    templeName: "Sydney Australia",
+    location: "Sydney, New South Wales, Australia",
+    dedicated: "1984, September, 20", 
+    area: 30677,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sydney-australia/400x250/sydney-australia-temple-lds-christmas-1070459-wallpaper.jpg"
+  },
+  {
+    templeName: "Baton Rouge Louisiana",
+    location: "Baton Rouge, Louisiana, United States",
+    dedicated: "2000, July, 16",
+    area: 10700,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/baton-rouge-louisiana/400x250/3-a75beca22300a3263bd47fba03b5b0d1b5ca0753.jpeg"
+  },
 ];
+
+// Temple cards
+const renderTempleCards = () => {
+  const templeCardsContainer = document.getElementById('temple-cards');
+  
+  temples.forEach((temple) => {
+    const card = document.createElement('div');
+    card.classList.add('temple-card');
+    
+    card.innerHTML = `
+      <img src="${temple.imageUrl}" alt="${temple.templeName}">
+      <h2>${temple.templeName}</h2>
+      <p><strong>Location:</strong> ${temple.location}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+      <p><strong>Area:</strong> ${temple.area} sq ft</p>
+    `;
+    
+    templeCardsContainer.appendChild(card);
+  });
+};
+
+// Call the function to render cards when the DOM is loaded
+window.addEventListener('DOMContentLoaded', renderTempleCards);
+
+
