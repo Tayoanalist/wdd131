@@ -122,3 +122,5 @@ const renderTempleCards = () => {
 window.addEventListener('DOMContentLoaded', renderTempleCards);
 
 
+
+
