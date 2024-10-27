@@ -1,3 +1,4 @@
+/* General styles */
 body {
 	font-family: "Arial", sans-serif;
 	padding: 0;
@@ -20,11 +21,11 @@ header {
 	border: none;
 	font-size: 1.5rem;
 	color: rgb(146, 135, 135);
-	display: none;
+	display: none; /* Initially hidden, shown in mobile view */
 }
 
 nav ul {
-	display: none;
+	display: flex; /* Change to flex for large screens */
 	list-style: none;
 	padding: 0;
 	background-color: #e784d0;
@@ -32,7 +33,11 @@ nav ul {
 }
 
 nav ul.show {
-	display: block;
+	display: block; /* Show when hamburger is clicked */
+}
+
+nav ul li {
+	flex: 1; /* Make each item take equal space */
 }
 
 nav ul li a {
@@ -89,16 +94,12 @@ footer {
 }
 
 @media (max-width: 765px) {
-	body {
-		background-color: #121212;
-	}
-
 	#hamburger {
-		display: block;
+		display: block; /* Show hamburger in mobile view */
 	}
 
 	nav ul {
-		display: none;
+		display: none; /* Hide by default in mobile view */
 		flex-direction: column;
 		position: absolute;
 		top: 100%;
@@ -110,7 +111,7 @@ footer {
 	}
 
 	nav ul.show {
-		display: flex;
+		display: flex; /* Show when hamburger is clicked */
 	}
 
 	header {
