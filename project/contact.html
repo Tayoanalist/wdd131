@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Temitayo Abodunrin Martins - LBS">
+    <meta name="author" content="Temitayo Abodunrin Martins">
+    <title>Contact Us - LBS</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="script/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <h1>LBS</h1>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="service">Service Interested In</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select a Service</option>
+          <option value="hair">Hair Styling</option>
+          <option value="nails">Nail Care</option>
+          <option value="facial">Facial Treatments</option>
+        </select>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="submitCount"></p>
+    </main>
+    <footer>
+      <p>&copy; <span id="currentYear"></span> Lily's Beauty Salon</p>
+    </footer>
+  </body>
+</html>
